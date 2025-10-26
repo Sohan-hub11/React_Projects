@@ -19,7 +19,8 @@ const App = () => {
   };
 
   const handleDeleteItems = (todoItemsName) => {
-    const newTodoItems = todoItems.filter(itemName != todoItemsName)
+    const newTodoItems = todoItems.filter((item) => item.name != todoItemsName)
+    setTodoItems(newTodoItems);
     console.log(`${todoItemsName} : item deleted`);
   }
   return (
